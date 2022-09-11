@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Shop Me</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+               <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="css/welcome.css">
+
+
+        <!--slider-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+
+ 
+
+
+        <!--footer-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            html, body {
+                background-color: rgb(219, 217, 217);
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+        <style type="text/css">
+            h1{
+                position: absolute;
+                padding-left: 100px;
+                color: #000000;
+                font-size: 30px;
+            }
+            
+            #search{
+                padding-bottom: 30px;
+            }
+            #searchBar{
+            margin-top: 3em;
+            width: 50%; 
+            padding-bottom: 4px;
+            padding-left: 6px;
+            padding-top: 10px;
+            border-top-style: solid;
+            border-top-width: 0px;
+            border-left-style: solid;
+            border-left-width: 0px;
+            border-right-style: solid;
+            border-right-width: 0px;
+            border-bottom-style: solid black;
+            border-right-width: 1px; 
+            }
+
+            .submit{
+            height: 35px;
+            background: #ffffff;
+            border:0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #000000;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+
+            }
+            .submit:hover{
+            background: #000000;
+            color: #ffffff;
+            border-color: #ffffff;
+            border-style: solid;
+            border-width: 1px;
+            }
+            #sub{
+                padding-top: 10px;
+            }
+        </style>
+
+        <!--speech recognition-->
+        <style>
+            .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+            .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+            .speech img {float: right; width: 40px }
+        </style>
+
+    </head>
+    <body>
+        <h1><b>NIGHT<span class=head1>RAVEN</span></b></h1>
+        <div class="flex-center position-ref full-height">
+
+   
+                <div class="top-right links">
+                 
+                        <a href="{{ url('/home') }}"><i class="fa fa-glass"></i>Home</a>
+                    
+
+                        
+                        <a href=""><i class="fa fa-user"></i> ABOUT</a>
+                        <a href=""><i class="fa fa-cart-plus"></i> SHOP</a>
+                        <a href=""><i class="fa fa-bookmark"></i> CART</a>
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> JOIN US</a>
+
+                      
+                            <!--<a href="{{ route('register') }}">REGISTER</a>-->
+                
+                </div>
+       
+
+            <div class="content">
+                <img src="images/9.png" style="padding-top: 100px;">
+                <!--<div class="title m-b-md">
+                    Laravel
+                </div>-->
+                <section id="search">           <!-- search bar -->
+            <input type="text" name="search" id="searchBar" placeholder="&#128269 SEARCH" id="labnol" method="get" >
+           <i class="fa fa-microphone" aria-hidden="true" onclick="startDictation()"></i>
+         </section>
+
+                <div class="links">
+                    <a href="">Home</a>
+                    <a href="">New In</a>
+                    <a href="">Gallery</a>
+                    <a href="">Best Selling</a>
+
+                    <!--<a href="">Laracasts</a>
+                    <a href="">News</a>
+                    <a href="">Blog</a>
+                    <a href="">Nova</a>
+                    <a href="">Forge</a>
+                    <a href="">GitHub</a>-->
+                </div>
+                
+                <!--multi column image slideshow-->
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+ 
+        <!--Item slider text-->
+        <!--<div class="container">
+          <div class="row" id="slider-text">
+            <div class="col-md-6" >
+              <h2>Multi-item Carousel</h2>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="container-fluid" style="padding-top: 20px; padding-bottom: 100px;">
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="carousel multi-item-carousel slide" id="myCarousel" data-ride="carousel">
+                <div class="carousel-inner">
+
+                  <div class="item active">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/m.jpg" class="img-responsive center-block"></a>
+                      <span class="badge">20%</span>
+                      <h4 class="text-center">Red Sunglasses</h4>
+                      <h5 class="text-center">Rs. 500</h5>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/n.jpg" class="img-responsive center-block"></a>
+                      <h4 class="text-center">Classic School Bag</h4>
+                      <h5 class="text-center">Rs. 2500</h5>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/o.jpg" class="img-responsive center-block"></a>
+                      <span class="badge">20%</span>
+                      <h4 class="text-center">Stylish Green shirt</h4>
+                      <h5 class="text-center">Rs. 3000</h5>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/p.jpg" class="img-responsive center-block"></a>
+                      <h4 class="text-center">Red Animated Shirt</h4>
+                      <h5 class="text-center">Rs. 1000</h5>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/q.jpg" class="img-responsive center-block"></a>
+                      <h4 class="text-center">Baby Pink Stylish Shirt</h4>
+                      <h5 class="text-center">Rs. 1200</h5>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <a href="#"><img src="images/r.jpg" class="img-responsive center-block"></a>
+                      <h4 class="text-center">Blue Wedding Gown</h4>
+                      <h5 class="text-center">Rs. 2000</h5>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div id="slider-control">
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="images/left.png" alt="Left" class="img-responsive" ></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="images/right.png" alt="Right" class="img-responsive"></a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                    </div>
+                </div>
+        <footer id="foot">
+        <div>
+            <h4>ACCOUNTS</h4>
+            <ul>
+            <li><a href="" style="color: #ffffff; font-size: 14px;">Manage Accounts</a></li>
+            <li><a href="" style="color: #ffffff; font-size: 14px;">Saved Items</a></li>
+            
+            </ul>
+        </div>
+        <div>
+            <h4>COMPANY</h4>
+            <div>
+                
+                <ul>
+            <li><a href="" style="color: #ffffff; font-size: 14px;">About</a></li>
+            <li><a href="" style="color: #ffffff; font-size: 14px;">Contact</a></li>
+            <li><a href="" style="color: #ffffff; font-size: 14px;">FAQ</a></li>
+            </ul>
+            </div>
+            
+        </div>
+       
+             
+        <div>
+            <h4>CONNECTS</h4>
+            <ul>
+            <li><a href="" style="color: #ffffff"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebook</a></li>
+            <li><a href="" style="color: #ffffff"><i class="fa fa-instagram"></i> instagram</a></li>
+            <li><a href="" style="color: #ffffff"><i class="fa fa-twitter-square"></i> twitter</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>NEWSLETTER</h4>
+            <input type="Email" name="Email" id="#" placeholder="Email Address">
+            <div id="sub"><input type="submit" name="" value="SIGN UP" class="submit"></div>
+        </div>
+
+    </footer>
+
+    
+
+    </body>
+    <!--slideshow js-->
+    <script type="text/javascript">
+  $(document).ready(function(){
+
+$('#myCarousel').carousel({ interval: 3000 });
+
+$('.multi-item-carousel .item').each(function(){
+var itemToClone = $(this);
+
+for (var i=1;i<6;i++) {
+itemToClone = itemToClone.next();
+
+if (!itemToClone.length) {
+itemToClone = $(this).siblings(':first');
+}
+
+itemToClone.children(':first-child').clone()
+.addClass("cloneditem-"+(i))
+.appendTo($(this));
+}
+});
+});
+
+</script>
+
+<!--speech recognition-->
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+
+</html>
